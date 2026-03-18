@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CyberYantra checkout!</title>
+    <style>
+      .productimg {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
+      }
+      body {
+        background-image: url("/week_03/Cyberyant.svg");
+        background-repeat: no-repeat; /* ถ้าไม่ต้องการให้รูปซ้ำ */
+        background-size: cover; /* ให้รูปขยายเต็มพื้นที่โดยไม่เสียทรง */
+        background-position: center; /* จัดให้อยู่ตรงกลาง */
+        min-height: 100vh;
+      }
+
+      P {
+        color: white;
+      }
+      h1 {
+        color: white;
+      }
+      h2 {
+        color: white;
+      }
+      li {
+        color: white;
+      }
+      label {
+        color: white;
+      }
+    </style>
+  </head>
+  <body style="background-color: black">
+    <div align="center">
+      <h1>Unalome-01</h1>
+      <img src="/week_03/1.jpg" class="productimg" />
+      <img src="/week_03/2.jpg" class="productimg" />
+      <img src="/week_03/3.jpg" class="productimg" />
+      <img src="/week_03/4.jpg" class="productimg" />
+      <img src="/week_03/5.jpg" class="productimg" />
+      <img src="/week_03/6.jpg" class="productimg" />
+    </div>
+    <div>
+      <h2>Pick some</h2>
+      <br />
+      <form action="submit-order" method="post">
+        <label for="size">เลือก Size</label>
+        <select name="" id="size">
+          <option value="S">Size S</option>
+          <option value="M">Size M</option>
+          <option value="L">Size L</option>
+          <option value="XL">Size XL</option>
+          <option value="2XL">Size 2XL</option>
+        </select>
+        <div>
+          <label for="customername">ใส่ชื่อ</label>
+          <input
+            id="customername"
+            type="text"
+            placeholder="whats ur name?"
+            name="value"
+          />
+          <br />
+
+          <label for="customeraddress">บ้านเลขที่</label>
+          <input
+            id="number address"
+            type="text"
+            placeholder="whats ur number address?"
+            name="value"
+          />
+          <br />
+          <label for="customeraddress2">ตำบล แขวง</label>
+          <input
+            id="address"
+            type="text"
+            placeholder="what is your address"
+            name="value"
+          />
+          <label for="customerPost">Post code</label>
+          <input
+            id="Post"
+            type="text"
+            placeholder="what is your address"
+            name="value"
+          />
+        </div>
+        <div class="form-group">
+          <label for="quantity">จำนวน (ตัว):</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            value="1"
+            required
+          />
+        </div>
+
+        <button type="submit" class="submit-btn">หยิบใส่ตะกร้า</button>
+      </form>
+    </div>
+  </body>
+</html>
