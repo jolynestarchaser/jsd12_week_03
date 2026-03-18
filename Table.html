@@ -4,54 +4,145 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Artist table</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse; /* ให้เส้นตารางติดกันสวยงาม */
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+      }
+
+      /* จัดการรูปภาพในตาราง */
+      .artist-thumb {
+        width: 120px; /* กำหนดความกว้างเท่ากันทุกรูป */
+        height: 120px; /* กำหนดความสูงเท่ากันทุกรูป */
+        object-fit: cover; /* กันรูปเสียทรง (Crop ส่วนเกินออก) */
+        object-position: top; /* เลือกให้เน้นส่วนบนของรูป (หน้าศิลปิน) */
+        border-radius: 50%; /* แถม: ทำเป็นรูปวงกลมแบบ Profile (ถ้าชอบ) */
+        display: block; /* ช่วยให้การจัดตำแหน่งในตารางแม่นยำขึ้น */
+        align-content: center;
+      }
+    </style>
   </head>
   <body>
     <table border="2" align="center">
       <thead>
         <tr>
+          <th>Profiles</th>
           <th>Artist</th>
           <th>Genre</th>
           <th>My Fav album, Fav song</th>
+          <th>Country</th>
         </tr>
       </thead>
       <tbody>
-        <td>Radiohead</td>
-        <td>Alternative rock</td>
-        <td>In rainbow, Ok computer</td>
         <tr>
+          <td>
+            <img
+              src="https://wiki-img.morrissey-solo.com/6/6c/Radiohead.jpg"
+              class="artist-thumb"
+            />
+          </td>
+          <td>Radiohead</td>
+          <td>Alternative rock</td>
+          <td>In rainbow, Ok computer</td>
+          <td>England</td>
+        </tr>
+        <tr>
+          <td>
+            <img
+              src="https://shop.bjork.com/cdn/shop/files/a4075712728_10.jpg?v=1751555370"
+              class="artist-thumb"
+            />
+          </td>
+
           <td>Bjork</td>
           <td>Electronic Experimental</td>
           <td>Debut, Post</td>
+          <td>Iceland</td>
         </tr>
         <tr>
+          <td>
+            <img
+              src="https://e.snmc.io/i/fullres/s/634d8edd392494fb9d674701c33d35bb/12497909"
+              class="artist-thumb"
+            />
+          </td>
+
           <td>Aphex twin</td>
           <td>Electronic Experimental</td>
           <td>Xtal</td>
+          <td>Ireland</td>
         </tr>
         <tr>
+          <td>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7u7tUB93bdX0OxgNiz6PBMdzisVT09sRQkg&s"
+              class="artist-thumb"
+            />
+          </td>
+
           <td>Kanye West</td>
           <td>Hip-hop</td>
           <td>Graduation, Ghost town</td>
+          <td>USA</td>
         </tr>
         <tr>
+          <td>
+            <img
+              src="https://i.ytimg.com/vi/SFd69i2VcWM/hqdefault.jpg"
+              class="artist-thumb"
+            />
+          </td>
+
           <td>Maximus!</td>
-          <td>Thai hiphop</td>
-          <td>Green energy</td>
+          <td>Hiphop</td>
+          <td>Green energy, ฟังเป็นเรื่องตลก, วันที่ดี</td>
+          <td>Thailand</td>
         </tr>
         <tr>
+          <td>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/2Hollis.jpg/960px-2Hollis.jpg"
+              class="artist-thumb"
+            />
+          </td>
+
           <td>2hollis</td>
           <td>Hyperpop, Rave</td>
-          <td>2</td>
+          <td>2, Poster boy, Lie</td>
+          <td>England</td>
         </tr>
         <tr>
+          <td>
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e02d651a27f17116bfb6744e848"
+              class="artist-thumb"
+            />
+          </td>
+
           <td>Akrilla</td>
           <td>Hip-hop dnb pop</td>
           <td>epistolares</td>
+          <td>Chile</td>
         </tr>
         <tr>
-          <td>ASAP ROCKY</td>
+          <td>
+            <img
+              src="https://townsquare.media/site/812/files/2024/08/attachment-Asap-Rocky-Album.jpg"
+              class="artist-thumb"
+            />
+          </td>
+
+          <td>A$AP ROCKY</td>
           <td>Hip-hop</td>
           <td>DON'T BE DUMB</td>
+          <td>USA</td>
         </tr>
       </tbody>
     </table>
